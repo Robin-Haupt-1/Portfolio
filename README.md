@@ -12,6 +12,8 @@ I have released 17 versions, fixing issues reported and adding features requeste
 It analyses the links between notes and finds the shortest path to a selected note starting from a single central index note. Then it displays this path and a tree view of notes to be found downstream from it in an interactive view that allows users to click on notes' names to open them.
 The view also has buttons to increase or decrease the depths of descendants shown in the tree, to reanalyze the notes' links after changes and to pin the view to the currently open note while browsing through others.
 
+![MOC view](https://github.com/Robin-Haupt-1/Portfolio/blob/main/images/moc.png)
+
 ### Settings
 
 
