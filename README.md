@@ -31,7 +31,7 @@ The view also has buttons to increase or decrease the depths of descendants show
 - TypeScript (1158 Lines of code)
 - Svelte (1374 Lines of code)
 
-# [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content))
+# [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
 
 # Footnotes
 
