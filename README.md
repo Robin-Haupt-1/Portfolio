@@ -53,8 +53,12 @@ Dependency Inversion
 ## [GitHub Repo](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis)
 
 
-- TypeScript (1158 Lines of code)
-- Svelte (1374 Lines of code)
+# Skills
+
+- Linux
+
+I use Linux as my main OS and am comfortable using the command line. I have experience with Manjaro and Ubuntu.
+
 
 # [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
 
