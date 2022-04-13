@@ -26,7 +26,13 @@ The view also has buttons to increase or decrease the depths of descendants show
 - migrating settings between versions with added or changed configuration options
 
 
-## Technologies used
+## Languages used
+
+- TypeScript: 1158 Lines of code
+- Svelte: 1374 Lines of code
+
+## [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
+
 
 # Food purchase tracker
 
