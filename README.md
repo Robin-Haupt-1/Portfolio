@@ -60,7 +60,12 @@ Dependency Inversion
 I use Linux as my main OS and am comfortable using the command line. I have experience with Manjaro and Ubuntu.
 
 
-# [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
+# Mindset / Learning psychology
+
+## Spaced repetition
+
+I use flashcards to support my learning process, to make sure I ideally only have to google something once and I never make the same mistake twice. I have created over 1000 of them already and am looking forward to 10Xing that number in the years to come. Using this technique helps me study programming languages, libraries, and well computer science concepts. My card creation routine is similar to the famous [Janki Method](https://www.jackkinsella.ie/articles/janki-method)
+
 
 # Footnotes
 
