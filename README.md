@@ -75,4 +75,4 @@ I use flashcards to support my learning process, to make sure I ideally only hav
 
 # Footnotes
 
-[^mocdownload]: [Official download statistics](https://github.com/obsidianmd/obsidian-releases/blob/6605c60a77a160e2fa0f1abe307cec308b839902/community-plugin-stats.json#L6110)
+[^mocdownloads]: [Official download statistics](https://github.com/obsidianmd/obsidian-releases/blob/6605c60a77a160e2fa0f1abe307cec308b839902/community-plugin-stats.json#L6110)
