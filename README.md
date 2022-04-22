@@ -2,8 +2,8 @@
 
 # Extension for notekeeping app Obsidian.md
 
-The extension helps users with ordering and linking their notes, keeping an overview of their entire collection and finding notes relevant to the one they're currently working on. It has been downloaded 8800 times[^mocdownloads] and has almost 100 stars on GitHub.
-I have released 17 versions, fixing issues reported and adding features requested by the community [on GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) and in the [Obsidian forum post announcing the plugins release.](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/4)
+The extension helps users with ordering and linking their notes, keeping an overview of their entire collection and finding notes relevant to the one they're currently working on. It has been downloaded 9500 times[^mocdownloads] and has almost 100 stars on GitHub.
+I have released 17 versions, fixing issues reported and adding features requested by the community [on GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) and in this [official Obsidian forum post announcing the plugins release.](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/4)
 
 ## What does it do?
 
@@ -75,4 +75,4 @@ I use flashcards to support my learning process, to make sure I ideally only hav
 
 # Footnotes
 
-[^mocdownloads]: [Official download statistics](https://github.com/obsidianmd/obsidian-releases/blob/6605c60a77a160e2fa0f1abe307cec308b839902/community-plugin-stats.json#L6110)
+[^mocdownloads]: [Official download statistics](https://github.com/obsidianmd/obsidian-releases/blob/b389b36debc012a93e52ae09a77be9cadbfcd050/community-plugin-stats.json#L6166)
