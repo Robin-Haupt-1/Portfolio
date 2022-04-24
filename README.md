@@ -75,9 +75,13 @@ The details of items, stores and purchases are split up over different tables th
 ![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-purchases_table.png)
 
 
+
 ### Technologies used
 
-# Approaches utilised
+- Python: 682 lines
+- Flask
+- MySQL (through mysql-connector-python library)
+- REST API
 
 Object-Relational Mapping
 Dependency Inversion
