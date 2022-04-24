@@ -52,13 +52,12 @@ In the future, I plan to write tools for outputting statistical analyses of the 
 
 #### Entering data of a purchase
 
-I have created a command line tool to enter and store the details about what food items i buy in a way thats optimized for statistical analysis. The command line is designed to make it fast to enter a new purchase by offering past stores and products to select from. It then sends the complete purchase information to a Flask server that stores it in the database. This follows a microservice approach, in that CLI and database read/write operations are seperate processes.
+![FPT enter purchase](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/cli-screenshot-m%C3%BCsli.png)
 
-The flask server does not know what kind of database it is accessing, since it works with a generic interface that the MySQL-based database implementation fulfills (Information hiding / Dependency Inversion).
+### Entering data of a new item
 
-In the future, i plan to write routines for outputting statistical analyses of the data, to get a better overview of my food purchasing habits and to help with making healthy and economical choices.
+https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-98b9-9f32ae49e7af.mp4
 
-# Technologies used
 
 ### Technologies used
 
