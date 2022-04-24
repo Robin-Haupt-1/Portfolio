@@ -83,9 +83,11 @@ The details of items, stores and purchases are split up over different tables th
 - MySQL (through mysql-connector-python library)
 - REST API
 
-Object-Relational Mapping
-Dependency Inversion
+### Biggest challenges
 
+- performing Object-Relational Mapping to store the data with as little redundancy as possible
+- communicating the data between the database, Flask endpoints and the CLI through HTTP requests
+- determining how to store as much detail as possible (brand, store, package size) of each item purchased without introducing confusion about which items are really the same commodity sold under a different label, so that they can later be analyzed as one item.
 
 ### [GitHub Repo](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis)
 
