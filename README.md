@@ -12,17 +12,18 @@ I have released 17 versions, fixing issues reported and adding features requeste
 It analyses the links between notes and finds the shortest path to a selected note starting from a single central index note. Then it displays this path and a tree view of notes to be found downstream from it in an interactive view that allows users to click on notes' names to open them.
 The view also has buttons to increase or decrease the depths of descendants shown in the tree, to reanalyze the notes' links after changes and to pin the view to the currently open note while browsing through others.
 
-![MOC view](https://github.com/Robin-Haupt-1/Portfolio/blob/main/images/moc.png)
+![MOC view](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20view%20with%20technology%20tree.png)
 
 ### Settings
 
+![MOC settings](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/blob/main/doc/2022-04-24%20settings.png)
 
 
 ## Biggest challenges
 
 - recursive pathfinding algorithm that analyses links between thousands of notes in a few hundred milliseconds
 - integration with Obsidians plugin API for reading note information and controlling the application through the plugin
-- creating an elegant but powerful and flexible web-based interface
+- creating an elegant but powerful and reactive web-based interface
 - migrating settings between versions with added or changed configuration options
 
 
