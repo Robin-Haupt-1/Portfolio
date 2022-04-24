@@ -58,6 +58,22 @@ In the future, I plan to write tools for outputting statistical analyses of the 
 
 https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-98b9-9f32ae49e7af.mp4
 
+### MySQL tables
+
+The details of items, stores and purchases are split up over different tables that refence each other's item by ID:
+
+#### Stores
+![FPT stores table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-stores-table.png)
+
+#### Abstract (generic) items
+![FPT abstract items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-abstract-items-table.png)
+
+#### Concrete (specific) items
+![FPT concrete items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-concrete-items-table.png)
+
+#### Purchase events
+![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-purchases_table.png)
+
 
 ### Technologies used
 
