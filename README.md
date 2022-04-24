@@ -60,7 +60,7 @@ https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-
 
 ### MySQL tables
 
-The details of items, stores and purchases are split up over different tables that refence each other's item by ID:
+The details of items, stores and purchases are split up over different tables that refence each other's entries by ID:
 
 #### Stores
 ![FPT stores table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-stores-table.png)
@@ -72,7 +72,7 @@ The details of items, stores and purchases are split up over different tables th
 ![FPT concrete items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-concrete-items-table.png)
 
 #### Purchase events
-![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-purchases_table.png)
+![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-24-purchases_table.png)
 
 
 
