@@ -94,19 +94,8 @@ The details of items, stores and purchases are split up over different tables th
 
 ## Skills
 
-- Linux
+## Footnotes
 
-I use Linux as my main OS and am very comfortable using the command line. I have experience with using Manjaro and Ubuntu.
+[^mocdownloads]: [Official download statistics for Obsidian extension "Map of Content"](https://github.com/obsidianmd/obsidian-releases/blob/b389b36debc012a93e52ae09a77be9cadbfcd050/community-plugin-stats.json#L6166)
 
-
-
-# Mindset / Learning psychology
-
-## Spaced repetition
-
-I use flashcards to support my learning process, to make sure I ideally only have to google something once and I never make the same mistake twice. I have created over 1000 of them already and am looking forward to 10Xing that number in the years to come. Using this technique helps me study programming languages, libraries, and well computer science concepts. My card creation routine is similar to the famous [Janki Method](https://www.jackkinsella.ie/articles/janki-method)
-
-
-# Footnotes
-
-[^mocdownloads]: [Official download statistics](https://github.com/obsidianmd/obsidian-releases/blob/b389b36debc012a93e52ae09a77be9cadbfcd050/community-plugin-stats.json#L6166)
+[^autosyncreviews]:
