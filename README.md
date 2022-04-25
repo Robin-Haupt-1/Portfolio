@@ -35,11 +35,6 @@ The view also has buttons to increase or decrease the depths of descendants show
 ### [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
 
 
-
-
-# Food purchase tracker
-1716 LOC
-
 ## Food purchase tracker
 
 I have created a command line tool to enter and store the details about what food items I buy in a way that's optimized for statistical analysis. The command line is designed to make it fast to enter a new purchase by offering past stores and products to select from. It then sends the complete purchase information to a Flask server that stores it in the database. This follows a microservice approach, in that the CLI and database read/write operations live in seperate processes.
