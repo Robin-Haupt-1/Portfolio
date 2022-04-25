@@ -48,7 +48,7 @@ The flask server does not know what kind of database it is accessing, since it w
 
 In the future, I plan to write tools for outputting statistical analyses of the data, to get a better overview of my food purchasing habits and to help with making healthy and economical choices.
 
-### Command line interface
+### Examples of command line interface usage
 
 #### Entering data of a purchase
 
@@ -56,7 +56,7 @@ In the future, I plan to write tools for outputting statistical analyses of the 
 
 ### Entering data of a new item
 
-![MPF create new item](https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-98b9-9f32ae49e7af.mp4)
+https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-98b9-9f32ae49e7af.mp4
 
 ### MySQL tables
 
