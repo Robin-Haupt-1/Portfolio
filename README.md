@@ -16,7 +16,7 @@ The view also has buttons to increase or decrease the depths of descendants show
 
 #### Settings
 
-![MOC settings](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/blob/main/doc/2022-04-24%20settings.png)
+![MOC settings](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20settings.png)
 
 
 ### Biggest challenges
@@ -52,11 +52,11 @@ In the future, I plan to write tools for outputting statistical analyses of the 
 
 #### Entering data of a purchase
 
-![FPT enter purchase](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/cli-screenshot-m%C3%BCsli.png)
+![FPT enter purchase](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/cli-screenshot-m%C3%BCsli.png)
 
 ### Entering data of a new item
 
-https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-98b9-9f32ae49e7af.mp4
+![MPF create new item](https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-98b9-9f32ae49e7af.mp4)
 
 ### MySQL tables
 
