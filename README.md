@@ -65,6 +65,9 @@ The details of items, stores and purchases are split up over different tables th
 ![FPT abstract items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-abstract-items-table.png)
 
 #### Concrete (specific) items
+
+<img src="https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-concrete-items-table.png" alt="FPT concrete items table" style="max-width:60%"/>
+
 ![FPT concrete items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-concrete-items-table.png)
 
 #### Purchase events
