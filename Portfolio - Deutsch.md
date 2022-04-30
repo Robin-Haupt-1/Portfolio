@@ -26,7 +26,6 @@ Die Lösung:
 
 Ich habe eine Erweiterung für Anki geschrieben, die die Liste neuer Wörter von dict.cc lädt und automatisch die Aussprache als ogg-Datei herunterlädt. Vor dem Import werden die neuen Wörter dem Nutzer präsentiert, damit dieser sie von Hand korrigieren und in eine einheitliche Form bringen kann. Gleiche Wörter mit verschiedenen Bedeutungen werden gruppiert, ganz links wird mit abwechselnden Symbolen die Gruppierung verdeutlicht:
 
-
 ![Edit words dialog](https://raw.githubusercontent.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki/main/doc/2021%20edit%20words%20dialog.png)
 
 Anschließend werden die englischen Wörter erneut präsentiert, um den idealen Suchausdruck für die Aussprache zu finden. Rechts wird die Lautschrift der gefundenen Aussprache angezeigt, daneben außerdem die Häufigkeit der Suchphrase im englischen Sprachgebrauch, welche von phrasefinder.io geladen wird. Anhand der Häufigkeit werden die Karten nachher in verschiedene Stapel sortiert.
@@ -60,7 +59,6 @@ Technologien: Python
 ![GitHub Repo](https://github.com/Robin-Haupt-1/Daemons-for-various-jobs)
 
 ## Herunterladen von YouTube-Videos für den Import in Obsidian (privates Projekt)
-## Herunterladen von YouTube-Videos für den Import in Obsidian (privates Projekt, GitHub)
 
 Das Problem: Ich möchte oft Notizen zu einem YouTube-Video verfassen. Dabei ist es hilfreich, das Transkript des Videos zur Hand zu haben, und es empfiehlt sich, das Video herunterzuladen, falls es irgendwann gelöscht wird. Das alles von Hand zu machen ist viel Arbeit.
 
@@ -73,6 +71,7 @@ Technologien: Python. Für das Herunterladen der Videos und des Transkripts benu
 
 ![GitHub Repo](https://github.com/Robin-Haupt-1/Download-YouTube-Videos-into-Obsidian)
 
+
 ## Automatische Synchronisation für Anki (GitHub)
 
 Das Problem:  Der Vokabeltrainer Anki kann mobil und auf dem Computer genutzt werden, und über die Cloud synchronisiert werden. Dass muss aber von Hand ausgelöst werden. Wenn man das Programm über den Tag verteilt viel benutzt, kann das anstrengend werden, und sogar zu einem unangenehmen Phänomen führen, bei dem man aus Gewohnheit immer wieder auf den Button klickt, selbst wenn es gar nichts zu synchronisieren gibt.
@@ -81,8 +80,15 @@ Die Lösung:
 
 Ich habe eine Erweiterung geschrieben, die die Synchronisation automatisch auslöst, wenn der Nutzer das Programm ein paar Minuten nicht benutzt hat. Die Inaktivität wird festgestellt, indem Maus- und Tastaturevents überwacht werden. Außerdem wird sichergestellt, dass keine Karten wiederholt oder bearbeitet werden. All das kann in einem Einstellungsdialog geregelt werden:
 
-![]
+![auto sync options](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20options%20dialog.png)
+
+Ein Logfenster ermöglicht es, die Aktivität der Erweiterung zu überwachen:
+
+![auto sync log window](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20log%20window.png)
+
 
 Technologien: Python für das Backend und PyQt5 für die GUI-Elemente
 
+
 ![GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
+
