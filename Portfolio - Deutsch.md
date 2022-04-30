@@ -18,7 +18,7 @@ Gleichzeitig bleibt die Flexibilität der verweisbasierten Organisation erhalten
 
 Technologien: Das Backend ist in TypeScript geschrieben, und die Frontend-Elemente sind als Svelte-Komponenten realisiert.
 
-## Importieren von Englischvokabeln von Onlinewörterbüchern in den Vokabeltrainer Anki (privates Projekt, GitHub)
+## Importieren von Englischvokabeln von Onlinewörterbüchern in den Vokabeltrainer Anki (privates Projekt)
 
 Das Problem: Um mein Englisch zu verbessern füge ich konstant englische Begriffe, die mir neu sind, in meinen Vokabeltrainer ein. Die Definitionen beziehe ich vom Onlinewörterbuch dict.cc und die Audiodateien der Aussprache vom Cambridge Dictionary. Ich brauchte ein Programm, das das Herunterladen dieser Informationen automatisiert.
 
@@ -37,8 +37,9 @@ Nach der Bestätigung werden die Mediendateien auf dem Computer gespeichert und 
 
 Technologien: Python für das Backend und PyQt5 für die GUI-Elemente. Für das Abfragen der Onlinewörterbücher nutze ich deren REST-API sofern vorhanden oder scrape das HTML mit BeautifulSoup. Bei dem Cambridge Dictionary muss man auch einen korrekten User-Agent mitsenden, um die Inhalte abrufen zu können.
 
+![GitHub Repo](https://github.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki)
 
-## Hintergrunddienste für verschiedene Aufgaben (privates Projekt, GitHub)
+## Hintergrunddienste für verschiedene Aufgaben (privates Projekt)
 
 Das Problem: Ich brauchte eine Plattform, in der ich verschiedene Dienst erstellen konnte, die kleine Aufgaben übernehmen, zum Beispiel die Interaktion mit meinem Todomanagerdienst und meinen Smart-Home-Lampen.
 
@@ -56,8 +57,9 @@ Ich habe eine Elternklasse erstellt, welche Aufgaben übernimmt, die jeder Diens
 
 Technologien: Python
 
+![GitHub Repo](https://github.com/Robin-Haupt-1/Daemons-for-various-jobs)
 
-
+## Herunterladen von YouTube-Videos für den Import in Obsidian (privates Projekt)
 ## Herunterladen von YouTube-Videos für den Import in Obsidian (privates Projekt, GitHub)
 
 Das Problem: Ich möchte oft Notizen zu einem YouTube-Video verfassen. Dabei ist es hilfreich, das Transkript des Videos zur Hand zu haben, und es empfiehlt sich, das Video herunterzuladen, falls es irgendwann gelöscht wird. Das alles von Hand zu machen ist viel Arbeit.
@@ -69,6 +71,7 @@ Mein Skript lädt das Video herunter und generiert eine Markdown-Datei, die alle
 Technologien: Python. Für das Herunterladen der Videos und des Transkripts benutze ich verschiedene Python-Libraries, allen voran pytube. Nach dem Herunterladen werden die Audio- und Videospur noch mit ffmpeg kombiniert.
 
 
+![GitHub Repo](https://github.com/Robin-Haupt-1/Download-YouTube-Videos-into-Obsidian)
 
 ## Automatische Synchronisation für Anki (GitHub)
 
@@ -81,3 +84,5 @@ Ich habe eine Erweiterung geschrieben, die die Synchronisation automatisch ausl�
 ![]
 
 Technologien: Python für das Backend und PyQt5 für die GUI-Elemente
+
+![GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
