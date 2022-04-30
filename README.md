@@ -2,7 +2,7 @@
 
 ## Extension for notekeeping app Obsidian.md
 
-The extension helps users with ordering and linking their notes, keeping an overview of their entire collection and finding notes relevant to the one they're currently working on. It has been downloaded 9500 times[^mocdownloads] and has almost 100 stars on GitHub.
+The extension helps users with ordering and linking their notes, keeping an overview of their entire collection and finding notes relevant to the one they're currently working on. It has been downloaded 10.000 times[^mocdownloads] and has almost 100 stars on GitHub.
 I have released 17 versions, fixing issues reported and adding features requested by the community [on GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) and in this [official Obsidian forum post announcing the plugins release.](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/)
 
 ### What does it do?
@@ -91,4 +91,4 @@ The details of items, stores and purchases are split up over different tables th
  
 ## Footnotes
 
-[^mocdownloads]: [Official download statistics for Obsidian extension "Map of Content"](https://github.com/obsidianmd/obsidian-releases/blob/b389b36debc012a93e52ae09a77be9cadbfcd050/community-plugin-stats.json#L6166)
+[^mocdownloads]: [Official download statistics for Obsidian extension "Map of Content"](https://github.com/obsidianmd/obsidian-releases/blob/b1c88521a25f026308b1bf8fb50682d9e1a51a92/community-plugin-stats.json#L6211)
