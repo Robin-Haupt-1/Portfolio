@@ -52,7 +52,7 @@ In the future, I plan to write tools for outputting statistical analyses of the 
 
 ### Entering data of a new item
 
-https://user-images.githubusercontent.com/85873542/163574717-8024f1d0-0ad9-489e-98b9-9f32ae49e7af.mp4
+https://user-images.githubusercontent.com/85873542/166096132-24622d5b-f95c-44ec-b41b-d95c5311ba8a.mp4
 
 ### MySQL tables
 
@@ -87,12 +87,8 @@ The details of items, stores and purchases are split up over different tables th
 - determining how to store as much detail as possible (brand, store, package size) of each item purchased without introducing confusion about which items are really the same commodity sold under a different label, so that they can later be analyzed as one item.
 
 ### [GitHub Repo](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis)
-
-
-## Skills
-
+ 
+ 
 ## Footnotes
 
 [^mocdownloads]: [Official download statistics for Obsidian extension "Map of Content"](https://github.com/obsidianmd/obsidian-releases/blob/b389b36debc012a93e52ae09a77be9cadbfcd050/community-plugin-stats.json#L6166)
-
-[^autosyncreviews]:
