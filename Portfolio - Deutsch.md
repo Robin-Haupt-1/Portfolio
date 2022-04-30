@@ -26,11 +26,12 @@ Die Lösung:
 
 Ich habe eine Erweiterung für Anki geschrieben, die die Liste neuer Wörter von dict.cc lädt und automatisch die Aussprache als ogg-Datei herunterlädt. Vor dem Import werden die neuen Wörter dem Nutzer präsentiert, damit dieser sie von Hand korrigieren und in eine einheitliche Form bringen kann. Gleiche Wörter mit verschiedenen Bedeutungen werden gruppiert, ganz links wird mit abwechselnden Symbolen die Gruppierung verdeutlicht:
 
-![]
+
+![Edit words dialog](https://raw.githubusercontent.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki/main/doc/2021%20edit%20words%20dialog.png)
 
 Anschließend werden die englischen Wörter erneut präsentiert, um den idealen Suchausdruck für die Aussprache zu finden. Rechts wird die Lautschrift der gefundenen Aussprache angezeigt, daneben außerdem die Häufigkeit der Suchphrase im englischen Sprachgebrauch, welche von phrasefinder.io geladen wird. Anhand der Häufigkeit werden die Karten nachher in verschiedene Stapel sortiert.
 
-![]
+![Edit scrubbing output dialog](https://raw.githubusercontent.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki/main/doc/2021%20edit%20scrubbing%20output%20dialog.png)
 
 Nach der Bestätigung werden die Karten automatisch erstellt, aber zuerst deaktiviert, da der Lerneffekt gering ist, wenn man die Karten direkt nach dem Erstellen wiederholt. Nach ein paar Tagen werden sie wieder aktiviert und können dann gelernt werden.
 
