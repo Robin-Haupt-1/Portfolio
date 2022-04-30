@@ -2,23 +2,35 @@
 
 ## Darstellen hierarchischer Beziehungen von Notizen im Wissensmanagementprogramm Obsidian
 
-Das Problem: Obsidian basiert auf der Idee, dass Notizen nicht in Ordnern sortiert, sondern durch Verknüpfungen untereinander geordnet werden sollen. Das ist viel flexibler als feste hierarchische Strukturen, aber wenn man viele Notizen hat, ist es schwer den Überblick zu behalten da man immer nur Links der nächsten Ebene sehen kann. Man hat keinen Anhaltspunkt, in welchem Geflecht von Notizen man sich befindet oder wie genau es strukturiert ist.
+Das Problem: Obsidian basiert auf der Idee, dass Notizen nicht in Ordnern sortiert, sondern durch Verknüpfungen untereinander geordnet werden sollen. Das ist viel flexibler als feste hierarchische Strukturen, aber wenn man viele Notizen hat, ist es schwer den Überblick zu behalten, da man immer nur Links der nächsten Ebene sehen kann. Man hat keinen Anhaltspunkt, in welchem Geflecht von Notizen man sich befindet oder wie genau es strukturiert ist.
 
 Die Lösung:
 
 Meine Erweiterung basiert auf der Idee, alle Notizen durch verschiedene, zunehmend abstraktere andere Notizen mit einem zentralen Index zu verknüpfen, also Kategorien und Unterkategorien realisiert als Notizen anstatt Ordner.
 
-Mein Programm analysiert alle Notizen und findet die kürzesten Pfade zu jeder Notiz, also sozusagen die Überkategorien. Diese werden automatisch als Pfad dargestellt, außerdem werden die Notizen, die hierarchisch unter der geöffneten Notiz liegen, als Verwandtschaftsbaum dargestellt. Hier ist ein Beispiel der automatisch generierten Übersicht aus meiner eigenen Sammlung:
+Mein Programm analysiert alle Notizen und findet die kürzesten Pfade von der zentralen Notiz zu jeder anderen Notiz, also sozusagen die Überkategorien. Diese werden automatisch als Pfad dargestellt, außerdem werden die Notizen, die hierarchisch unter der geöffneten Notiz liegen, als Verwandtschaftsbaum dargestellt. Hier ist ein Beispiel der automatisch generierten Übersicht aus meiner eigenen Sammlung:
 
-![]
+![MOC example view](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20view%20with%20technology%20tree.png)
 
-Dies bringt eine große Erleichterung im Navigieren und Sortieren großer Sammlungen von Notizen.
-Gleichzeitig bleibt die Flexibilität der verweisbasierten Organisation erhalten.
+Dies bringt eine große Erleichterung im Navigieren und Sortieren großer Sammlungen von Notizen. Gleichzeitig bleibt die Flexibilität der verweisbasierten Organisation erhalten, da tausende Notizen völlig neu in die Hierarchie einsortiert werden können durch das Abändern eines einzigen Links.
+
+Die Ansicht ermöglicht es, auf die Namen der Notizen zu klicken, um sie im Editor zu öffnen. Es gibt Buttons um die Verknüpfungen auf mehr oder weniger Ebenen der Hierarchie anzuzeigen oder den Verwandtschaftsbaum einer Notiz offen zu halten während man durch andere Notizen navigiert.
+
+Ich habe diese Erweiterung als Open Source veröffentlicht. Seitdem wurde sie 10.000 mal heruntergeladen und hat 17 Updates erhalten, in denen ich Ideen und Bugfixes realisiert habe, die von den Nutzern [auf GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) und [im offiziellen Obsidianforum](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/) eingebracht wurden.
 
 
-Technologien: Das Backend ist in TypeScript geschrieben, und die Frontend-Elemente sind als Svelte-Komponenten realisiert.
+### Einstellungen
 
-## Importieren von Englischvokabeln von Onlinewörterbüchern in den Vokabeltrainer Anki (privates Projekt)
+In dem Einstellungsdialog können die zu beachtenden Dateien anhand ihres Namens oder Pfades gefiltert und einige andere Verhaltensweisen personalisiert werden.
+
+![MOC settings](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20view%20with%20technology%20tree.png)
+
+### Verwendete Technologien
+
+- Backend: TypeScript (1158 Codezeilen)
+- Frontend: Svelte (1374 Codezeilen)
+
+## Importieren von Englischvokabeln von Onlinewörterbüchern in den Vokabeltrainer Anki
 
 Das Problem: Um mein Englisch zu verbessern füge ich konstant englische Begriffe, die mir neu sind, in meinen Vokabeltrainer ein. Die Definitionen beziehe ich vom Onlinewörterbuch dict.cc und die Audiodateien der Aussprache vom Cambridge Dictionary. Ich brauchte ein Programm, das das Herunterladen dieser Informationen automatisiert.
 
@@ -38,6 +50,52 @@ Technologien: Python für das Backend und PyQt5 für die GUI-Elemente. Für das 
 
 ![GitHub Repo](https://github.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki)
 
+
+## Automatische Synchronisation für Anki
+
+Das Problem:  Der Vokabeltrainer Anki kann mobil und auf dem Computer genutzt werden, und über die Cloud synchronisiert werden. Das muss aber von Hand ausgelöst werden. Wenn man das Programm über den Tag verteilt viel benutzt, kann das anstrengend werden, und sogar zu einem unangenehmen Phänomen führen, bei dem man aus Gewohnheit immer wieder auf den Button klickt, selbst wenn es gar nichts zu synchronisieren gibt.
+
+Die Lösung:
+
+Ich habe eine Erweiterung geschrieben, die die Synchronisation automatisch auslöst, wenn der Nutzer das Programm ein paar Minuten nicht benutzt hat. Die Inaktivität wird festgestellt, indem Maus- und Tastaturevents überwacht werden. Außerdem wird sichergestellt, dass keine Karten wiederholt oder bearbeitet werden. All das kann in einem Einstellungsdialog geregelt werden:
+
+![auto sync options](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20options%20dialog.png)
+
+Ein Logfenster ermöglicht es, die Aktivität der Erweiterung zu überwachen:
+
+![auto sync log window](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20log%20window.png)
+
+Technologien: Python für das Backend und PyQt5 für die GUI-Elemente
+
+Ich habe die Erweiterung veröffentlicht. Sie wurde bis jetzt 650 mal heruntergeladen und hat überwiegend positive Bewertungen erhalten. [^autosyncdownloadpage]
+
+![GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
+
+
+## Informationen über Nahrungsmittelkäufe über die Kommandozeile eingeben und in einer relationalen Datenbank speichern
+
+Das Problem: Ich möchte wissen, was ich an Essen kaufe, um besser beurteilen zu können wie ausgewogen meine Ernährung ist und zu wissen wie viel ich für welche Lebensmittel ausgebe.
+Bestehende Möglichkeiten Kassenzettel automatisch digitalisieren zu lassen sind unbefriedigend, außerdem sind die Informationen auf den Zetteln oft nicht vollständig oder aussagekräftig genug, sodass man auf jeden Fall manuell dazuarbeiten muss. Die Informationen von Hand in eine Exceldatei o.ä. zu übertragen würde zu viel Zeit kosten, und die Auflistung wäre in diesem Format statistisch nicht unbedingt gut auszuwerten und würde schnell unübersichtlich und mühsam zu handhaben werden.
+
+Die Lösung:
+
+Ich habe eine Kommandozeilenapplikation geschrieben, die die Informationen über vergangene Einkäufe aus einer Datenbank ließt und sie beim Eingeben der neuen Einkäufe vorschlägt. Dadurch wird der Zeitaufwand für das Digitalisieren der Kassenbons stark gesengt, und es enstehen keine doppelten Einträge für den gleichen Artikel, die einander später bei der statistischen Auswertung wieder manuell zugeordnet werden müssten.
+
+#### Gebrauch der Applikation
+
+![FPT enter purchase](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/cli-screenshot-m%C3%BCsli.png)
+
+#### Einpflegen der Daten eines neuen Produkts
+
+https://user-images.githubusercontent.com/85873542/166096132-24622d5b-f95c-44ec-b41b-d95c5311ba8a.mp4
+
+(Video geht nicht? [Hier](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/2022-04-15-create-concrete-item.gif) klicken!)
+
+Die Informationen werden über REST-API-Endpunkte an einen Server übertragen, der sie in die Datenbank schreibt.
+
+
+
+
 ## Hintergrunddienste für verschiedene Aufgaben (privates Projekt)
 
 Das Problem: Ich brauchte eine Plattform, in der ich verschiedene Dienst erstellen konnte, die kleine Aufgaben übernehmen, zum Beispiel die Interaktion mit meinem Todomanagerdienst und meinen Smart-Home-Lampen.
@@ -50,9 +108,11 @@ Ich habe eine Elternklasse erstellt, welche Aufgaben übernimmt, die jeder Diens
 
 - Über die API von meinem Todomanagerdienst bestimmte Projekte überwachen, und den Inhalt von neuen Einträgen in diesen Projekten in einer bestimmten Suchmaschine im Browser öffnen. Damit kann ich mir zum Beispiel unterwegs neue Englischvokabeln notieren und diese direkt nachschlagen wenn ich wieder am Computer bin.
 
-- Meine Firewallregeln überwachen und mich mit einem Alarmton benachrichtigen, wenn sie nicht mehr korrekt eingestellt sein sollten.
+- Meine Firewallregeln überwachen und mich mit einem Alarmton benachrichtigen, falls sie nicht mehr korrekt eingestellt sein sollten.
 
 - Die Routinen meiner smarten Lampen täglich um ein paar Minuten verschieben, um eine Umstellung auf neue Schlafenszeiten sanft zu gestalten
+
+- Jeden Tag eine PDF Datei ausdrucken, damit die Düsen meines Druckers nicht vertrocknen.
 
 Technologien: Python
 
@@ -66,29 +126,14 @@ Die Lösung:
 
 Mein Skript lädt das Video herunter und generiert eine Markdown-Datei, die alle wichtigen Informationen wie Beschreibung, Uploaddatum und den Link zu der Videodatei enthält. Diese Datei kann dann in Obsidian betrachtet und bearbeitet werden. Sie enthält außerdem, soweit vorhanden, das automatisch von YouTube generierte oder manuell erstellte Transkript, das zur besseren Übersichtlichkeit in 30-Sekunden-Blöcke aufgeteilt wird.
 
-Technologien: Python. Für das Herunterladen der Videos und des Transkripts benutze ich verschiedene Python-Libraries, allen voran pytube. Nach dem Herunterladen werden die Audio- und Videospur noch mit ffmpeg kombiniert.
+Technologien: Python. Für das Herunterladen der Videos und des Transkripts benutze ich verschiedene Python-Libraries. Nach dem Herunterladen werden die Audio- und Videospur noch mit ffmpeg kombiniert.
 
 
 ![GitHub Repo](https://github.com/Robin-Haupt-1/Download-YouTube-Videos-into-Obsidian)
 
 
-## Automatische Synchronisation für Anki (GitHub)
 
-Das Problem:  Der Vokabeltrainer Anki kann mobil und auf dem Computer genutzt werden, und über die Cloud synchronisiert werden. Dass muss aber von Hand ausgelöst werden. Wenn man das Programm über den Tag verteilt viel benutzt, kann das anstrengend werden, und sogar zu einem unangenehmen Phänomen führen, bei dem man aus Gewohnheit immer wieder auf den Button klickt, selbst wenn es gar nichts zu synchronisieren gibt.
+# Fußnoten / Links
 
-Die Lösung:
-
-Ich habe eine Erweiterung geschrieben, die die Synchronisation automatisch auslöst, wenn der Nutzer das Programm ein paar Minuten nicht benutzt hat. Die Inaktivität wird festgestellt, indem Maus- und Tastaturevents überwacht werden. Außerdem wird sichergestellt, dass keine Karten wiederholt oder bearbeitet werden. All das kann in einem Einstellungsdialog geregelt werden:
-
-![auto sync options](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20options%20dialog.png)
-
-Ein Logfenster ermöglicht es, die Aktivität der Erweiterung zu überwachen:
-
-![auto sync log window](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20log%20window.png)
-
-
-Technologien: Python für das Backend und PyQt5 für die GUI-Elemente
-
-
-![GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
-
+[^autosyncdownloadpage]: Downloadseite der Ankierweiterung "Auto Sync": http://ankiweb.net/shared/info/501542723
+[^mocdownloads]:
