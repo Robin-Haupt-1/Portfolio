@@ -33,9 +33,9 @@ Anschließend werden die englischen Wörter erneut präsentiert, um den idealen 
 
 ![Edit scrubbing output dialog](https://raw.githubusercontent.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki/main/doc/2021%20edit%20scrubbing%20output%20dialog.png)
 
-Nach der Bestätigung werden die Karten automatisch erstellt, aber zuerst deaktiviert, da der Lerneffekt gering ist, wenn man die Karten direkt nach dem Erstellen wiederholt. Nach ein paar Tagen werden sie wieder aktiviert und können dann gelernt werden.
+Nach der Bestätigung werden die Mediendateien auf dem Computer gespeichert und die Karten erstellt.
 
-Technologien: Python für das Backend und PyQt5 für die GUI-Elemente
+Technologien: Python für das Backend und PyQt5 für die GUI-Elemente. Für das Abfragen der Onlinewörterbücher nutze ich deren REST-API sofern vorhanden oder scrape das HTML mit BeautifulSoup. Bei dem Cambridge Dictionary muss man auch einen korrekten User-Agent mitsenden, um die Inhalte abrufen zu können.
 
 
 ## Hintergrunddienste für verschiedene Aufgaben (privates Projekt, GitHub)
@@ -48,7 +48,9 @@ Ich habe eine Elternklasse erstellt, welche Aufgaben übernimmt, die jeder Diens
 
 - Wenn ich meinen Kindle per USB verbinde, automatisch aus der SQlite-Datenbank des Gerätes neue Englischvokabeln, die ich mir zum Lernen markiert habe, zum Import in meinen Vokabeltrainer auslesen
 
-- Über die API von meinem Todomanagerdienst bestimmte Projekte überwachen, und den Inhalt von neuen Einträgen in diesen Projekten in einer bestimmten Suchmaschine im Browser öffnen. Damit kann ich mir zum Beispiel unterwegs neue Englischvokabeln notieren und diese direkt recherchieren wenn ich wieder am Computer bin.
+- Über die API von meinem Todomanagerdienst bestimmte Projekte überwachen, und den Inhalt von neuen Einträgen in diesen Projekten in einer bestimmten Suchmaschine im Browser öffnen. Damit kann ich mir zum Beispiel unterwegs neue Englischvokabeln notieren und diese direkt nachschlagen wenn ich wieder am Computer bin.
+
+- Meine Firewallregeln überwachen und mich mit einem Alarmton benachrichtigen, wenn sie nicht mehr korrekt eingestellt sein sollten.
 
 - Die Routinen meiner smarten Lampen täglich um ein paar Minuten verschieben, um eine Umstellung auf neue Schlafenszeiten sanft zu gestalten
 
@@ -64,7 +66,7 @@ Die Lösung:
 
 Mein Skript lädt das Video herunter und generiert eine Markdown-Datei, die alle wichtigen Informationen wie Beschreibung, Uploaddatum und den Link zu der Videodatei enthält. Diese Datei kann dann in Obsidian betrachtet und bearbeitet werden. Sie enthält außerdem, soweit vorhanden, das automatisch von YouTube generierte oder manuell erstellte Transkript, das zur besseren Übersichtlichkeit in 30-Sekunden-Blöcke aufgeteilt wird.
 
-Technologien: Python. Für das Herunterladen der Videos und des Transkripts benutze ich verschiedene Python-Libraries. Nach dem Herunterladen werden die Audio- und Videospur noch mit ffmpeg kombiniert.
+Technologien: Python. Für das Herunterladen der Videos und des Transkripts benutze ich verschiedene Python-Libraries, allen voran pytube. Nach dem Herunterladen werden die Audio- und Videospur noch mit ffmpeg kombiniert.
 
 
 
