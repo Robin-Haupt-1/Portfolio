@@ -128,15 +128,15 @@ Die Lösung:
 
 Ich habe eine Elternklasse erstellt, welche Aufgaben übernimmt, die jeder Dienst braucht, zum Beispiel das Auslösen des Haupttasks in bestimmten Zeitabständen oder das in der Kommandozeile Ausgeben und in Logdateien Speichern von hilfreichen Hinweisen. Von dieser Klasse erben viele verschiedene Dienste, die nur noch das initialisieren müssen, was sie für ihre jeweilige Aufgabe brauchen. Aufgaben, die diese Dienste übernehmen sind zum Beispiel:
 
-- Wenn ich meinen Kindle per USB verbinde, automatisch aus der SQlite-Datenbank des Gerätes neue Englischvokabeln, die ich mir zum Lernen markiert habe, zum Import in meinen Vokabeltrainer auslesen
+- Wenn ich meinen Kindle per USB verbinde, automatisch aus der SQlite-Datenbank des Gerätes neue Englischvokabeln, die ich mir zum Lernen markiert habe, zum Import in meinen Vokabeltrainer auslesen.
 
 - Über die API von meinem Todomanagerdienst bestimmte Projekte überwachen, und den Inhalt von neuen Einträgen in diesen Projekten in einer bestimmten Suchmaschine im Browser öffnen. Damit kann ich mir zum Beispiel unterwegs neue Englischvokabeln notieren und diese direkt nachschlagen wenn ich wieder am Computer bin.
 
 - Meine Firewallregeln überwachen und mich mit einem Alarmton benachrichtigen, falls sie nicht mehr korrekt eingestellt sein sollten.
 
-- Die Routinen meiner smarten Lampen täglich um ein paar Minuten verschieben, um eine Umstellung auf neue Schlafenszeiten sanft zu gestalten
+- Die Routinen meiner smarten Lampen täglich um ein paar Minuten verschieben, um eine langsame Umstellung auf neue Schlafenszeiten zu ermöglichen.
 
-- Jeden Tag eine PDF Datei ausdrucken, damit die Düsen meines Druckers nicht vertrocknen.
+- Jeden Tag eine PDF-Datei ausdrucken, damit die Düsen meines Druckers nicht austrocknen.
 
 ### Verwendete Technologien
 
@@ -152,7 +152,9 @@ Die Lösung:
 
 Mein Skript lädt das Video herunter und generiert eine Markdown-Datei, die alle wichtigen Informationen wie Beschreibung, Uploaddatum und den Link zu der Videodatei enthält. Diese Datei kann dann in Obsidian betrachtet und bearbeitet werden. Sie enthält außerdem, soweit vorhanden, das automatisch von YouTube generierte oder manuell erstellte Transkript, das zur besseren Übersichtlichkeit in 30-Sekunden-Blöcke aufgeteilt wird.
 
-Technologien: Python. Für das Herunterladen der Videos und des Transkripts benutze ich verschiedene Python-Libraries. Nach dem Herunterladen werden die Audio- und Videospur noch mit ffmpeg kombiniert.
+
+### Verwendete Technologien
+Python. Für das Herunterladen der Videos und des Transkripts benutze ich die Python-Libraries `pytube` und `youtube_transcript_api`. Nach dem Herunterladen werden die Audio- und Videospur noch mit `ffmpeg` kombiniert.
 
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Download-YouTube-Videos-into-Obsidian)
