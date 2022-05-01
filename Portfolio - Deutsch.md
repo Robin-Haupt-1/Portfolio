@@ -80,9 +80,9 @@ Python für das Backend und PyQt5 für die GUI-Elemente
 
 ## Informationen über Lebensmittelkäufe über die Kommandozeile eingeben und in einer relationalen Datenbank speichern
 
-Das Problem: Ich möchte wissen, was ich an Essen kaufe, um besser beurteilen zu können. wie ausgewogen meine Ernährung ist. und zu wissen, wie viel ich für welche Lebensmittel ausgebe.
+Das Problem: Ich möchte Informationen über das Essen, das ich kaufe, speichern, um besser beurteilen zu können wie ausgewogen meine Ernährung ist und um längerfristige Entwicklungen nachvollziehen zu können.
 
-Bestehende Möglichkeiten, Kassenzettel automatisch digitalisieren zu lassen sind unbefriedigend oder teuer, außerdem sind die Informationen auf den Zetteln oft nicht vollständig oder aussagekräftig genug, sodass man auf jeden Fall manuell dazuarbeiten muss. Die Informationen von Hand in eine Exceltabelle o.ä. zu übertragen würde zu viel Zeit kosten, und die Auflistung wäre in diesem Format statistisch nicht unbedingt gut auszuwerten und würde schnell unübersichtlich werden.
+Die Informationen von Hand in eine Exceltabelle o.ä. zu übertragen würde viel Zeit kosten, und die Auflistung wäre in diesem Format statistisch nicht unbedingt gut auszuwerten.
 
 Die Lösung:
 
@@ -133,4 +133,4 @@ Python. Die Verbindung zur MySQL-Datenbank wird über die Bibliothek `mysql-conn
 
 [^mocdownloads]: [Offizielle Downloadstatistik der Obsidianerweiterung "Map of Content"](https://github.com/obsidianmd/obsidian-releases/blob/b1c88521a25f026308b1bf8fb50682d9e1a51a92/community-plugin-stats.json#L6199)
 
-[^autosyncdownloadpage]: [Downloadseite der Ankierweiterung "Auto Sync"](http://ankiweb.net/shared/info/501542723)
+[^autosyncdownloadpage]: [Downloadseite der Ankierweiterung "Auto Sync"](http://ankiweb.net/shared/info/501542723) (Die Downloadstatistik ist nicht öffentlich einsehbar)
