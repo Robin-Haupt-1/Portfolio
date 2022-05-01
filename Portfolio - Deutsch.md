@@ -27,7 +27,7 @@ In dem Einstellungsdialog können die zu beachtenden Dateien anhand ihres Namens
 
 ### Verwendete Technologien
 
-Das Backend ist in TypeScript geschrieben, und die Frontend-Elemente sind als Svelte-Komponenten realisiert.
+Das Backend ist in TypeScript geschrieben, und die Frontend-Elemente wurden mit Webtechnologien (HTML, CSS, Svelte) erstellt.
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
 
