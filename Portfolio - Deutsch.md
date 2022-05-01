@@ -124,7 +124,7 @@ Python. Die Verbindung zur MySQL-Datenbank wird über die Bibliothek `mysql-conn
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis)
 
-## Hintergrunddienste für verschiedene Aufgaben (privates Projekt)
+## Hintergrunddienste für verschiedene Aufgaben
 
 Das Problem: Ich brauchte eine Plattform, in der ich verschiedene Dienst erstellen konnte, die kleine Aufgaben übernehmen, zum Beispiel die Interaktion mit meinem Todomanagerdienst und meinen Smart-Home-Lampen.
 
@@ -148,7 +148,7 @@ Python und verschiedene Python-libraries
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Daemons-for-various-jobs)
 
-## Herunterladen von YouTube-Videos für den Import in Obsidian (privates Projekt)
+## Herunterladen von YouTube-Videos für den Import in Obsidian
 
 Das Problem: Ich möchte oft Notizen zu einem YouTube-Video verfassen. Dabei ist es hilfreich, das Transkript des Videos zur Hand zu haben, und es empfiehlt sich, das Video herunterzuladen, falls es irgendwann gelöscht wird. Das alles von Hand zu machen ist viel Arbeit.
 
