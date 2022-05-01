@@ -118,6 +118,9 @@ Die Informationen über Geschäfte, Produkte und Einkaufshistorie werden in vers
 
 ![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-24-purchases_table.png)
 
+## Verwendete Technologien
+
+Python. Die Verbindung zur MySQL-Datenbank wird über die Bibliothek `mysql-connector-python` hergestellt, und als Webserver nutze ich `Flask`.
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis)
 
