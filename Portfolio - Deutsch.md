@@ -8,7 +8,8 @@ Die Lösung:
 
 Meine Erweiterung basiert auf der Idee, alle Notizen durch verschiedene, zunehmend abstraktere andere Notizen mit einem zentralen Index zu verknüpfen, also Kategorien und Unterkategorien realisiert als Notizen anstatt Ordner.
 
-Mein Programm analysiert alle Notizen und findet die kürzesten Pfade von der zentralen Notiz zu jeder anderen Notiz, also sozusagen die Überkategorien. Diese werden automatisch als Pfad dargestellt. Wenn es mehr als einen Pfad mit dieser Länge gibt, werden alle diese kürzesten Pfade dargestellt, um ein Bild von den verschiedenen Umständen, unter denen die Notiz relevant ist, zu vermitteln. Außerdem werden die Notizen, die hierarchisch unter der geöffneten Notiz liegen, als Verwandtschaftsbaum dargestellt. Hier ist ein Beispiel der automatisch generierten Übersicht aus meiner eigenen Sammlung:
+Mein Programm analysiert alle Notizen und findet die kürzesten Pfade von der zentralen Notiz zu jeder anderen Notiz, also sozusagen die Überkategorien. Diese werden automatisch als Pfad dargestellt. Wenn es mehr als einen Pfad mit dieser Länge gibt, werden alle diese kürzesten Pfade dargestellt, um ein Bild von den verschiedenen Umständen, unter denen die Notiz relevant ist zu vermitteln.
+Außerdem werden die Notizen, die hierarchisch unter der geöffneten Notiz liegen, als Verwandtschaftsbaum dargestellt. Hier ist ein Beispiel der automatisch generierten Übersicht aus meiner persönlichen Sammlung:
 
 ![MOC example view](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20view%20with%20technology%20tree.png)
 
@@ -77,16 +78,19 @@ Python für das Backend und PyQt5 für die GUI-Elemente
 [GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
 
 
-## Informationen über Nahrungsmittelkäufe über die Kommandozeile eingeben und in einer relationalen Datenbank speichern
+## Informationen über Lebensmittelkäufe über die Kommandozeile eingeben und in einer relationalen Datenbank speichern
 
-Das Problem: Ich möchte wissen, was ich an Essen kaufe, um besser beurteilen zu können wie ausgewogen meine Ernährung ist und zu wissen wie viel ich für welche Lebensmittel ausgebe.
-Bestehende Möglichkeiten Kassenzettel automatisch digitalisieren zu lassen sind unbefriedigend oder teuer, außerdem sind die Informationen auf den Zetteln oft nicht vollständig oder aussagekräftig genug, sodass man auf jeden Fall manuell dazuarbeiten muss. Die Informationen von Hand in eine Exceldatei o.ä. zu übertragen würde zu viel Zeit kosten, und die Auflistung wäre in diesem Format statistisch nicht unbedingt gut auszuwerten und würde schnell unübersichtlich werden und mühsam zu handhaben sein.
+Das Problem: Ich möchte wissen, was ich an Essen kaufe, um besser beurteilen zu können. wie ausgewogen meine Ernährung ist. und zu wissen, wie viel ich für welche Lebensmittel ausgebe.
+
+Bestehende Möglichkeiten, Kassenzettel automatisch digitalisieren zu lassen sind unbefriedigend oder teuer, außerdem sind die Informationen auf den Zetteln oft nicht vollständig oder aussagekräftig genug, sodass man auf jeden Fall manuell dazuarbeiten muss. Die Informationen von Hand in eine Exceltabelle o.ä. zu übertragen würde zu viel Zeit kosten, und die Auflistung wäre in diesem Format statistisch nicht unbedingt gut auszuwerten und würde schnell unübersichtlich werden.
 
 Die Lösung:
 
-Ich habe eine Kommandozeilenapplikation geschrieben, die die Informationen über vergangene Einkäufe aus einer Datenbank ließt und sie bei der Eingabe der neuen Einkäufe vorschlägt. Dadurch wird der Zeitaufwand für das Übertragen der Kassenbons stark gesengt, und es enstehen keine doppelten Einträge für den gleichen Artikel, die später bei der statistischen Auswertung wieder einander zugeordnet werden müssten. Auch wird zwischen abstrakteren Produktarten und konkreten Artikeln unterschieden, wobei jeder konkrete Artikel einem abstrakten Produkttyp zugeordnet sein muss. So kann ein Warentyp im gesamten analysiert werden, egal wo er unter welchen Marke in welcher Packungsgröße erworben wurde.
+Meine Kommandozeilenapplikation ließt die Informationen über vergangene Einkäufe aus einer Datenbank schläft und sie bei der Eingabe der neuen Einkäufe vor. Dadurch wird der Zeitaufwand für das Übertragen der Kassenbons stark gesengt, und es enstehen keine doppelten Einträge für den gleichen Artikel, die später bei der statistischen Auswertung wieder vereint werden müssten.
+Auch wird zwischen abstrakteren Produktarten und konkreten Artikeln unterschieden, wobei jeder konkrete Artikel einem abstrakten Produkttyp zugeordnet sein muss. So kann ein Warentyp im Gesamten analysiert werden, unabhängig davon, in welchem Geschäft er unter welcher Marke in welcher Packungsgröße erworben wurde.
 
-Die in der Kommandozeile eingegebenen Informationen werden über REST-API-Endpunkte an einen Server übertragen, der sie in die Datenbank schreibt. Diese Segregation der Aufgabenbereiche folgt einem Microserviceansatz. In meiner Implementation ist die MySQL-Datenbank beliebig mit einer anderen Art von Datenbank außtauschbar, da der Server unter Beachtung des Dependency-Inversion-Prinzips mit einem unspezifischen Interface arbeitet, das durch die MySQL-Schnittstelle oder eine andere Datenbankschnittstelle erfüllt werden kann.
+Die in der Kommandozeile eingegebenen Informationen werden über REST-API-Endpunkte an einen Server übertragen, der sie in eine Datenbank schreibt. Diese Segregation der Aufgabenbereiche folgt einem Microserviceansatz.
+In meiner Implementation ist die MySQL-Datenbank beliebig mit einer anderen Art von Datenbank außtauschbar, da der Server unter Beachtung des Dependency-Inversion-Prinzips mit einem unspezifischen Interface arbeitet, das durch die MySQL-Schnittstelle oder eine andere Datenbankschnittstelle erfüllt werden kann.
 
 ### Screenshot vom Gebrauch der Applikation zum Speichern eines gekauften Artikels
 
@@ -100,7 +104,7 @@ https://user-images.githubusercontent.com/85873542/166096132-24622d5b-f95c-44ec-
 
 ### MySQL-Tabellen
 
-Die Informationen über Geschäfte, Produkte und Einkaufshistorie werden in verschiedenen Tabellen gespeichert, die die Einträge anderer Tabellen über ihre ID referenzieren.
+Die Informationen über Geschäfte, Produkte und Einkaufshistorie werden in verschiedenen Tabellen gespeichert, die auf die Einträge anderer Tabellen mittels deren ID verweisen.
 
 ### Geschäfte
 
