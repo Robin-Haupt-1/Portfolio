@@ -8,7 +8,7 @@ Die Lösung:
 
 Meine Erweiterung basiert auf der Idee, alle Notizen durch verschiedene, zunehmend abstraktere andere Notizen mit einem zentralen Index zu verknüpfen, also Kategorien und Unterkategorien realisiert als Notizen anstatt Ordner.
 
-Mein Programm analysiert alle Notizen und findet die kürzesten Pfade von der zentralen Notiz zu jeder anderen Notiz, also sozusagen die Überkategorien. Diese werden automatisch als Pfad dargestellt, außerdem werden die Notizen, die hierarchisch unter der geöffneten Notiz liegen, als Verwandtschaftsbaum dargestellt. Hier ist ein Beispiel der automatisch generierten Übersicht aus meiner eigenen Sammlung:
+Mein Programm analysiert alle Notizen und findet die kürzesten Pfade von der zentralen Notiz zu jeder anderen Notiz, also sozusagen die Überkategorien. Diese werden automatisch als Pfad dargestellt. Wenn es mehr als einen Pfad mit dieser Länge gibt, werden alle diese kürzesten Pfade dargestellt, um ein Bild von den verschiedenen Umständen, unter denen die Notiz relevant ist, zu vermitteln. Außerdem werden die Notizen, die hierarchisch unter der geöffneten Notiz liegen, als Verwandtschaftsbaum dargestellt. Hier ist ein Beispiel der automatisch generierten Übersicht aus meiner eigenen Sammlung:
 
 ![MOC example view](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20view%20with%20technology%20tree.png)
 
@@ -49,7 +49,7 @@ Nach der Bestätigung werden die Mediendateien auf dem Computer gespeichert und 
 
 ### Verwendete Technologien
 
-Python für das Backend und PyQt5 für die GUI-Elemente. Für das Abfragen der Onlinewörterbücher nutze ich deren REST-API sofern vorhanden oder scrape das HTML mit BeautifulSoup. Bei dem Cambridge Dictionary muss man auch einen korrekten User-Agent mitsenden, um die Inhalte abrufen zu können.
+Python für das Backend und PyQt5 für die GUI-Elemente. Für das Abfragen der Onlinewörterbücher nutze ich deren REST-API sofern vorhanden oder scrape das HTML mit BeautifulSoup.
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki)
 
