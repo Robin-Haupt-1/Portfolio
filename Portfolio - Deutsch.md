@@ -16,7 +16,7 @@ Dies bringt eine große Erleichterung im Navigieren und Sortieren großer Sammlu
 
 Die Ansicht ermöglicht es, auf die Namen der Notizen zu klicken, um sie im Editor zu öffnen. Es gibt Buttons um die Verknüpfungen auf mehr oder weniger Ebenen der Hierarchie anzuzeigen oder den Verwandtschaftsbaum einer Notiz offen zu halten während man durch andere Notizen navigiert.
 
-Ich habe diese Erweiterung als Open Source veröffentlicht. Seitdem wurde sie 10.000 mal heruntergeladen und hat 17 Updates erhalten, in denen ich Ideen und Bugfixes realisiert habe, die von den Nutzern [auf GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) und [im offiziellen Obsidianforum](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/) eingebracht wurden. Sie hat auf GitHub schon fast 100 Sterne erhalten.
+Ich habe diese Erweiterung als Open Source veröffentlicht. Seitdem wurde sie 10.000 mal heruntergeladen [^mocdownloads] und hat 17 Updates erhalten, in denen ich Ideen und Bugfixes realisiert habe, die von den Nutzern [auf GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) und [im offiziellen Obsidianforum](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/) eingebracht wurden. Sie hat auf GitHub schon fast 100 Sterne erhalten.
 
 
 ### Einstellungen
