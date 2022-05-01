@@ -1,29 +1,26 @@
 # Portfolio
 
-## Visualizing hierarchical relationships between notes in the knowledge management application Obsidian.md
+## Visualizing hierarchical relationships between notes in the knowledge management tool Obsidian.md
 
-The problem: Obsidian is built around the concept that notes should'nt be sorted into folders but primarily linked among each other to establish order and context. This allows for more flexibility than a predefined, strictly hierarchical scaffolding, but it makes it harder to keep an overview of large collections of notes since all you can ever see is the very next layer of links, without any indication as to the larger context in which the note is relevant or how it fits into the whole collection.
-
+The challenge: Obsidian is built around the concept that notes shouldn't be sorted into folders but primarily linked among each other to establish order and context. This allows for more flexibility than a predefined, strictly hierarchical scaffolding, but it makes it harder to keep an overview of large collections of notes since all you can ever see is the very next layer of links, without much of an indication as to the larger context in which the note is relevant.
 
 The solution: My plugin is built to support the approach of connecting all notes to a single central note through a decentralized network of notes that are increasingly abstract, in effect serving as hierarchical categories and subcategories realized as notes instead of folders.
 
-It will analyze all the users notes and find the shortest path from the central note to every other note, which is assumed to best represent its greater context. This path will be displayed to the user. If there are several shortest paths with the same length, they will all be displayed, allowing a certain ambiguity that well reflects the way information often doesn't strictly belongs only to a single context.
-
-In addition, the notes that hierarchically are children of the currently open one will be displayed as a tree view.
+It will analyze all the users notes and find the shortest path from the central note to every other note, which is assumed to best represent its greater context. This path will be displayed to the user. If there are several shortest paths, they will all be displayed, allowing a certain ambiguity that reflects the way information often doesn't strictly belongs only to a single context. The notes that are hierarchically below the currently open one will be displayed as a tree view.
 
 This is what it looks like using my some notes from own collection as an example:
 
 ![MOC example view](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20view%20with%20technology%20tree.png)
 
 
-This added contextual information allows navigating and sorting large collections of thoughts and information with greater ease, while preserving all the flexibility of the link-first philosophy of organizing notes, since the hierarchical location of thousands of notes can be altered by changing a single link in a single one of them.
+This added contextual information allows navigating and sorting large collections of thoughts and information with greater ease, while preserving all the flexibility of the link-first philosophy of organizing notes, because the hierarchical location of thousands of notes can be altered by changing just a single link.
 
-The view allows users to click on notes' names to open them, it also has buttons to increase or decrease the depths of descendants shown in the tree, to reanalyze the notes' links after changes and to pin the view to the currently open note while browsing through others.
+The view allows users to click on notes' names to open them. It also has buttons to increase or decrease the depths of descendants shown in the tree, to reanalyze the notes' links after changes and to pin the view to the currently open note while browsing through others.
 
 I have published this plugin as free and open source software. It has been downloaded 10.000 times[^mocdownloads] and has received almost 100 stars on GitHub. I have released 17 updates, fixing issues reported and adding features requested by the community [on GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) and in the [official Obsidian forum](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/).
 
 
-### Options
+### Options dialog
 
 The options dialog allows users to filter the notes to be analyzed and displayed in the tree by their name or path and to customize some other plugin behaviour.
 
@@ -35,31 +32,33 @@ The backend is written in TypeScript, and the frontend has been created using we
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
 
-## Importieren von Englischvokabeln von Onlinewörterbüchern in den Vokabeltrainer Anki
+## Importing english vocabulary terms from online dictionaries into the spaced repetition software Anki
 
-Das Problem: Um mein Englisch zu verbessern füge ich konstant englische Begriffe, die mir neu sind, in meinen Vokabeltrainer ein. Die Definitionen beziehe ich vom Onlinewörterbuch dict.cc und die Audiodateien der Aussprache vom Cambridge Dictionary. Ich brauchte ein Programm, das das Herunterladen dieser Informationen automatisiert.
+The challenge: To improve my grasp of the english language, I enter terms I am not familiar with into my flashcard trainer whenever I encounter them. I obtain the german translations from the crowdsourced dictionary dict.cc and the pronunciation audio files from the online Cambridge Dictionary. Downloading all this data and creating the cards manually would be prohibitively work intensive.
 
-Die Lösung:
+The solution:
 
-Ich habe eine Erweiterung für Anki geschrieben, die die Liste neuer Wörter von dict.cc lädt und automatisch die Aussprache als ogg-Datei herunterlädt. Vor dem Import werden die neuen Wörter dem Nutzer präsentiert, damit dieser sie von Hand korrigieren und in eine einheitliche Form bringen kann. Gleiche Wörter mit verschiedenen Bedeutungen werden gruppiert, ganz links wird mit abwechselnden Symbolen die Gruppierung verdeutlicht:
+I have created an extension for Anki, the tool I use to review my flashcards, that automatically loads the terms that are to be turned into cards from dict.cc, downloads the pronunciation files and creates the cards for me. Prior to creating the cards, it has to show the new terms to me so I can make adjustments where necessary. Different german translations for the same english word will be combined into one card. On the left side, these future groupings are displayed using lines of alternating characters, immediately reacting to changes I make to the terms.
 
 ![Edit words dialog](https://raw.githubusercontent.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki/main/doc/2021%20edit%20words%20dialog.png)
 
-Anschließend werden die englischen Wörter erneut präsentiert, um den idealen Suchausdruck für die Aussprache zu finden. Rechts wird die Lautschrift der gefundenen Aussprache angezeigt, daneben außerdem die Häufigkeit der Suchphrase im englischen Sprachgebrauch, welche von phrasefinder.io geladen wird. Anhand der Häufigkeit werden die Karten nachher in verschiedene Stapel sortiert.
+Then the english terms will be displayed again so I can try to find the ideal search phrase to get the pronunciation files. As I change the search phrases, the phonetic spelling of the pronunciation found will be displayed, if any, next to a number indicating how common the phrase is in everyday usage. Assuming that rarer terms will be harder to learn, the finished cards will be sorted into different decks with different review settings based on this number.
 
 ![Edit scrubbing output dialog](https://raw.githubusercontent.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki/main/doc/2021%20edit%20scrubbing%20output%20dialog.png)
 
-Nach der Bestätigung werden die Mediendateien auf dem Computer gespeichert und die Karten erstellt.
+After this final step, the audio files will be downloaded and the cards created.
 
-### Verwendete Technologien
+### Technologies used
 
-Python für das Backend und PyQt5 für die GUI-Elemente. Für das Abfragen der Onlinewörterbücher nutze ich deren REST-API sofern vorhanden oder scrape das HTML mit BeautifulSoup. Bei dem Cambridge Dictionary muss man auch einen korrekten User-Agent mitsenden, um die Inhalte abrufen zu können.
+I used Python, and created the GUI using PyQt5. For querying the online dictionary I use their REST-API or scrape their website using BeautifulSoup.
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki)
 
 
 ## Automatische Synchronisation für Anki
 
+
+The problem:
 Das Problem:  Der Vokabeltrainer Anki kann mobil und auf dem Computer genutzt werden, und über die Cloud synchronisiert werden. Das muss aber von Hand ausgelöst werden. Wenn man das Programm über den Tag verteilt viel benutzt, kann das anstrengend werden, und sogar zu einem unangenehmen Phänomen führen, bei dem man aus Gewohnheit immer wieder auf den Button klickt, selbst wenn es gar nichts zu synchronisieren gibt.
 
 Die Lösung:
