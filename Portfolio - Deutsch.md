@@ -16,8 +16,9 @@ Dies bringt eine große Erleichterung im Navigieren und Sortieren großer Sammlu
 
 Die Ansicht ermöglicht es, auf die Namen der Notizen zu klicken, um sie im Editor zu öffnen. Es gibt Buttons um die Verknüpfungen auf mehr oder weniger Ebenen der Hierarchie anzuzeigen oder den Verwandtschaftsbaum einer Notiz offen zu halten während man durch andere Notizen navigiert.
 
-Ich habe diese Erweiterung als Open Source veröffentlicht. Seitdem wurde sie 10.000 mal heruntergeladen und hat 17 Updates erhalten, in denen ich Ideen und Bugfixes realisiert habe, die von den Nutzern [auf GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) und [im offiziellen Obsidianforum](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/) eingebracht wurden.
+Ich habe diese Erweiterung als Open Source veröffentlicht. Seitdem wurde sie 10.000 mal heruntergeladen und hat 17 Updates erhalten, in denen ich Ideen und Bugfixes realisiert habe, die von den Nutzern [auf GitHub](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content/issues?q=+is%3Aissue+-author%3ARobin-Haupt-1+) und [im offiziellen Obsidianforum](https://forum.obsidian.md/t/map-of-content-plugin-release/25209/) eingebracht wurden. Sie hat auf GitHub schon fast 100 Sterne erhalten.
 
+[GitHub Repo](https://github.com/Robin-Haupt-1/Obsidian-Map-of-Content)
 
 ### Einstellungen
 
@@ -27,8 +28,7 @@ In dem Einstellungsdialog können die zu beachtenden Dateien anhand ihres Namens
 
 ### Verwendete Technologien
 
-- Backend: TypeScript (1158 Codezeilen)
-- Frontend: Svelte (1374 Codezeilen)
+Das Backend ist in TypeScript geschrieben, und die Frontend-Elemente sind als Svelte-Komponenten realisiert.
 
 ## Importieren von Englischvokabeln von Onlinewörterbüchern in den Vokabeltrainer Anki
 
@@ -67,11 +67,11 @@ Ein Logfenster ermöglicht es, die Aktivität der Erweiterung zu überwachen:
 
 ![auto sync log window](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20log%20window.png)
 
+Ich habe die Erweiterung veröffentlicht. Sie wurde bis jetzt 650 mal heruntergeladen und hat überwiegend positive Bewertungen erhalten. [^autosyncdownloadpage]
+
 ### Verwendete Technologien
 
 Python für das Backend und PyQt5 für die GUI-Elemente
-
-Ich habe die Erweiterung veröffentlicht. Sie wurde bis jetzt 650 mal heruntergeladen und hat überwiegend positive Bewertungen erhalten. [^autosyncdownloadpage]
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
 
@@ -87,37 +87,38 @@ Ich habe eine Kommandozeilenapplikation geschrieben, die die Informationen über
 
 Die in der Kommandozeile eingegebenen Informationen werden über REST-API-Endpunkte an einen Server übertragen, der sie in die Datenbank schreibt. Diese Segregation der Aufgabenbereiche folgt einem Microserviceansatz. In meiner Implementation ist die MySQL-Datenbank beliebig mit einer anderen Art von Datenbank außtauschbar, da der Server unter Beachtung des Dependency-Inversion-Prinzips mit einem unspezifischen Interface arbeitet, das durch die MySQL-Schnittstelle oder eine andere Datenbankschnittstelle erfüllt werden kann.
 
-#### Screenshot vom Gebrauch der Applikation zum Speichern eines gekauften Artikels
+### Screenshot vom Gebrauch der Applikation zum Speichern eines gekauften Artikels
 
 ![FPT enter purchase](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/cli-screenshot-m%C3%BCsli.png)
 
-#### Video vom Einpflegen der Daten eines neuen Produkts
+### Video vom Einpflegen der Daten eines neuen Produkts
 
 https://user-images.githubusercontent.com/85873542/166096132-24622d5b-f95c-44ec-b41b-d95c5311ba8a.mp4
 
 (Video geht nicht? [Hier](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/2022-04-15-create-concrete-item.gif) klicken)
 
-#### MySQL-Tabellen
+### MySQL-Tabellen
 
 Die Informationen über Geschäfte, Produkte und Einkaufshistorie werden in verschiedenen Tabellen gespeichert, die die Einträge anderer Tabellen über ihre ID referenzieren.
 
-##### Geschäfte
+### Geschäfte
 
 ![FPT stores table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-stores-table.png)
 
-#### Abstrakte Produkttypen
+### Abstrakte Produkttypen
 
 ![FPT abstract items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-abstract-items-table.png)
 
-#### Konkrete Artikel
+### Konkrete Artikel
 
 ![FPT concrete items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-concrete-items-table.png)
 
-#### Einkaufshistorie
+### Einkaufshistorie
 
 ![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-24-purchases_table.png)
 
 
+[GitHub Repo](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis)
 
 ## Hintergrunddienste für verschiedene Aufgaben (privates Projekt)
 
@@ -160,5 +161,6 @@ Technologien: Python. Für das Herunterladen der Videos und des Transkripts benu
 
 # Fußnoten / Links
 
-[^autosyncdownloadpage]: Downloadseite der Ankierweiterung "Auto Sync": http://ankiweb.net/shared/info/501542723
-[^mocdownloads]:
+[^mocdownloads]: [Offizielle Downloadstatistik der Obsidianerweiterung "Map of Content"](https://github.com/obsidianmd/obsidian-releases/blob/b1c88521a25f026308b1bf8fb50682d9e1a51a92/community-plugin-stats.json#L6199)
+
+[^autosyncdownloadpage]: [Downloadseite der Ankierweiterung "Auto Sync"](http://ankiweb.net/shared/info/501542723)
