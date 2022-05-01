@@ -23,7 +23,7 @@ Ich habe diese Erweiterung als Open Source veröffentlicht. Seitdem wurde sie 10
 
 In dem Einstellungsdialog können die zu beachtenden Dateien anhand ihres Namens oder Pfades gefiltert und einige andere Verhaltensweisen personalisiert werden.
 
-![MOC settings](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20view%20with%20technology%20tree.png)
+![MOC settings](https://raw.githubusercontent.com/Robin-Haupt-1/Obsidian-Map-of-Content/main/doc/2022-04-24%20settings.png)
 
 ### Verwendete Technologien
 
@@ -46,9 +46,11 @@ Anschließend werden die englischen Wörter erneut präsentiert, um den idealen 
 
 Nach der Bestätigung werden die Mediendateien auf dem Computer gespeichert und die Karten erstellt.
 
-Technologien: Python für das Backend und PyQt5 für die GUI-Elemente. Für das Abfragen der Onlinewörterbücher nutze ich deren REST-API sofern vorhanden oder scrape das HTML mit BeautifulSoup. Bei dem Cambridge Dictionary muss man auch einen korrekten User-Agent mitsenden, um die Inhalte abrufen zu können.
+### Verwendete Technologien
 
-![GitHub Repo](https://github.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki)
+Python für das Backend und PyQt5 für die GUI-Elemente. Für das Abfragen der Onlinewörterbücher nutze ich deren REST-API sofern vorhanden oder scrape das HTML mit BeautifulSoup. Bei dem Cambridge Dictionary muss man auch einen korrekten User-Agent mitsenden, um die Inhalte abrufen zu können.
+
+[GitHub Repo](https://github.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki)
 
 
 ## Automatische Synchronisation für Anki
@@ -65,34 +67,55 @@ Ein Logfenster ermöglicht es, die Aktivität der Erweiterung zu überwachen:
 
 ![auto sync log window](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20log%20window.png)
 
-Technologien: Python für das Backend und PyQt5 für die GUI-Elemente
+### Verwendete Technologien
+
+Python für das Backend und PyQt5 für die GUI-Elemente
 
 Ich habe die Erweiterung veröffentlicht. Sie wurde bis jetzt 650 mal heruntergeladen und hat überwiegend positive Bewertungen erhalten. [^autosyncdownloadpage]
 
-![GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
+[GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
 
 
 ## Informationen über Nahrungsmittelkäufe über die Kommandozeile eingeben und in einer relationalen Datenbank speichern
 
 Das Problem: Ich möchte wissen, was ich an Essen kaufe, um besser beurteilen zu können wie ausgewogen meine Ernährung ist und zu wissen wie viel ich für welche Lebensmittel ausgebe.
-Bestehende Möglichkeiten Kassenzettel automatisch digitalisieren zu lassen sind unbefriedigend, außerdem sind die Informationen auf den Zetteln oft nicht vollständig oder aussagekräftig genug, sodass man auf jeden Fall manuell dazuarbeiten muss. Die Informationen von Hand in eine Exceldatei o.ä. zu übertragen würde zu viel Zeit kosten, und die Auflistung wäre in diesem Format statistisch nicht unbedingt gut auszuwerten und würde schnell unübersichtlich und mühsam zu handhaben werden.
+Bestehende Möglichkeiten Kassenzettel automatisch digitalisieren zu lassen sind unbefriedigend oder teuer, außerdem sind die Informationen auf den Zetteln oft nicht vollständig oder aussagekräftig genug, sodass man auf jeden Fall manuell dazuarbeiten muss. Die Informationen von Hand in eine Exceldatei o.ä. zu übertragen würde zu viel Zeit kosten, und die Auflistung wäre in diesem Format statistisch nicht unbedingt gut auszuwerten und würde schnell unübersichtlich werden und mühsam zu handhaben sein.
 
 Die Lösung:
 
-Ich habe eine Kommandozeilenapplikation geschrieben, die die Informationen über vergangene Einkäufe aus einer Datenbank ließt und sie beim Eingeben der neuen Einkäufe vorschlägt. Dadurch wird der Zeitaufwand für das Digitalisieren der Kassenbons stark gesengt, und es enstehen keine doppelten Einträge für den gleichen Artikel, die einander später bei der statistischen Auswertung wieder manuell zugeordnet werden müssten.
+Ich habe eine Kommandozeilenapplikation geschrieben, die die Informationen über vergangene Einkäufe aus einer Datenbank ließt und sie bei der Eingabe der neuen Einkäufe vorschlägt. Dadurch wird der Zeitaufwand für das Übertragen der Kassenbons stark gesengt, und es enstehen keine doppelten Einträge für den gleichen Artikel, die später bei der statistischen Auswertung wieder einander zugeordnet werden müssten. Auch wird zwischen abstrakteren Produktarten und konkreten Artikeln unterschieden, wobei jeder konkrete Artikel einem abstrakten Produkttyp zugeordnet sein muss. So kann ein Warentyp im gesamten analysiert werden, egal wo er unter welchen Marke in welcher Packungsgröße erworben wurde.
 
-#### Gebrauch der Applikation
+Die in der Kommandozeile eingegebenen Informationen werden über REST-API-Endpunkte an einen Server übertragen, der sie in die Datenbank schreibt. Diese Segregation der Aufgabenbereiche folgt einem Microserviceansatz. In meiner Implementation ist die MySQL-Datenbank beliebig mit einer anderen Art von Datenbank außtauschbar, da der Server unter Beachtung des Dependency-Inversion-Prinzips mit einem unspezifischen Interface arbeitet, das durch die MySQL-Schnittstelle oder eine andere Datenbankschnittstelle erfüllt werden kann.
+
+#### Screenshot vom Gebrauch der Applikation zum Speichern eines gekauften Artikels
 
 ![FPT enter purchase](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/cli-screenshot-m%C3%BCsli.png)
 
-#### Einpflegen der Daten eines neuen Produkts
+#### Video vom Einpflegen der Daten eines neuen Produkts
 
 https://user-images.githubusercontent.com/85873542/166096132-24622d5b-f95c-44ec-b41b-d95c5311ba8a.mp4
 
-(Video geht nicht? [Hier](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/2022-04-15-create-concrete-item.gif) klicken!)
+(Video geht nicht? [Hier](https://raw.githubusercontent.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/main/doc/2022-04-15-create-concrete-item.gif) klicken)
 
-Die Informationen werden über REST-API-Endpunkte an einen Server übertragen, der sie in die Datenbank schreibt.
+#### MySQL-Tabellen
 
+Die Informationen über Geschäfte, Produkte und Einkaufshistorie werden in verschiedenen Tabellen gespeichert, die die Einträge anderer Tabellen über ihre ID referenzieren.
+
+##### Geschäfte
+
+![FPT stores table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-stores-table.png)
+
+#### Abstrakte Produkttypen
+
+![FPT abstract items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-abstract-items-table.png)
+
+#### Konkrete Artikel
+
+![FPT concrete items table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-15-concrete-items-table.png)
+
+#### Einkaufshistorie
+
+![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-24-purchases_table.png)
 
 
 
@@ -114,9 +137,11 @@ Ich habe eine Elternklasse erstellt, welche Aufgaben übernimmt, die jeder Diens
 
 - Jeden Tag eine PDF Datei ausdrucken, damit die Düsen meines Druckers nicht vertrocknen.
 
-Technologien: Python
+### Verwendete Technologien
 
-![GitHub Repo](https://github.com/Robin-Haupt-1/Daemons-for-various-jobs)
+Python und verschiedene Python-libraries
+
+[GitHub Repo](https://github.com/Robin-Haupt-1/Daemons-for-various-jobs)
 
 ## Herunterladen von YouTube-Videos für den Import in Obsidian (privates Projekt)
 
@@ -129,7 +154,7 @@ Mein Skript lädt das Video herunter und generiert eine Markdown-Datei, die alle
 Technologien: Python. Für das Herunterladen der Videos und des Transkripts benutze ich verschiedene Python-Libraries. Nach dem Herunterladen werden die Audio- und Videospur noch mit ffmpeg kombiniert.
 
 
-![GitHub Repo](https://github.com/Robin-Haupt-1/Download-YouTube-Videos-into-Obsidian)
+[GitHub Repo](https://github.com/Robin-Haupt-1/Download-YouTube-Videos-into-Obsidian)
 
 
 
