@@ -5,7 +5,9 @@
 
 The challenge: Obsidian is built around the concept that notes shouldn't be sorted into folders but primarily linked among each other to establish order and context. This allows for more flexibility than a predefined, strictly hierarchical scaffolding, but it makes it harder to keep an overview of large collections of notes since all you can ever see is the very next layer of links, without much of an indication as to the larger context in which the note is relevant.
 
-The innovation: My plugin is built to support the approach of connecting all notes to a single central note through a decentralized network of notes that are increasingly abstract, in effect serving as hierarchical categories and subcategories realized as notes instead of folders.
+The innovation:
+
+My plugin is built to support the approach of connecting all notes to a single central note through a decentralized network of notes that are increasingly abstract, in effect serving as hierarchical categories and subcategories realized as notes instead of folders.
 
 It will analyze all the users notes and find the shortest path from the central note to every other note, which is assumed to best represent its greater context. This path will be displayed to the user. If there are several shortest paths, they will all be displayed, allowing a certain ambiguity that reflects the way information often doesn't strictly belongs only to a single context. The notes that are hierarchically below the currently open one will be displayed as a tree view.
 
@@ -51,7 +53,7 @@ After this second editing, the audio files will be downloaded and the cards crea
 
 ### Technologies used
 
-I used Python, and created the GUI using PyQt5. For querying the online dictionaries I use their REST-API or scrape their website using BeautifulSoup.
+I used Python, and created the GUI using PyQt5. For querying the online dictionaries I use their REST-API or scrape their website using `BeautifulSoup`.
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Dict.cc-and-Cambridge-Dictionary-to-Anki)
 
@@ -74,7 +76,7 @@ I have made this extension publicly available as free and open source software. 
 
 ### Technologies used
 
-Python für das Backend und PyQt5 für die GUI-Elemente
+Python for the backend and PyQt5 for the graphical user interface
 
 [GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
 
@@ -125,7 +127,7 @@ The details of items, stores and purchases are split up over different tables th
 
 ![FPT purchases table](https://github.com/Robin-Haupt-1/Food-purchases-tracking-and-analysis/blob/main/doc/2022-04-24-purchases_table.png)
 
-## Verwendete Technologien
+## Technologies used
 
 Python. I use the python library `mysql-connector-python` to connect to the MySQL database, and `Flask` as my web server.
 
