@@ -1,11 +1,11 @@
 # Portfolio
-([This is the english version. Click here for the german one 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md))
+([This is the english version of my portfolio. Click here to read the german one 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md))
 
 ## Visualizing hierarchical relationships between notes in the knowledge management tool Obsidian.md
 
 The challenge: Obsidian is built around the concept that notes shouldn't be sorted into folders but primarily linked among each other to establish order and context. This allows for more flexibility than a predefined, strictly hierarchical scaffolding, but it makes it harder to keep an overview of large collections of notes since all you can ever see is the very next layer of links, without much of an indication as to the larger context in which the note is relevant.
 
-The solution: My plugin is built to support the approach of connecting all notes to a single central note through a decentralized network of notes that are increasingly abstract, in effect serving as hierarchical categories and subcategories realized as notes instead of folders.
+The innovation: My plugin is built to support the approach of connecting all notes to a single central note through a decentralized network of notes that are increasingly abstract, in effect serving as hierarchical categories and subcategories realized as notes instead of folders.
 
 It will analyze all the users notes and find the shortest path from the central note to every other note, which is assumed to best represent its greater context. This path will be displayed to the user. If there are several shortest paths, they will all be displayed, allowing a certain ambiguity that reflects the way information often doesn't strictly belongs only to a single context. The notes that are hierarchically below the currently open one will be displayed as a tree view.
 
@@ -35,7 +35,7 @@ The backend is written in TypeScript, and the frontend has been created using we
 
 ## Importing english vocabulary terms from online dictionaries into the spaced repetition software Anki
 
-The challenge: To improve my understanding of the english language, I enter terms I am not familiar with into my flashcard trainer whenever I encounter them. I obtain the german translations from the crowdsourced dictionary dict.cc and audio files of the corrent pronunciation from the Cambridge Dictionary website. Downloading all this data and creating the cards manually would be prohibitively time intensive.
+The problem: To improve my understanding of the english language, I enter terms I am not familiar with into my flashcard trainer whenever I encounter them. I obtain the german translations from the crowdsourced dictionary dict.cc and audio files of the corrent pronunciation from the Cambridge Dictionary website. Downloading all this data and creating the cards manually would be prohibitively time intensive.
 
 The solution:
 
@@ -79,13 +79,12 @@ Python für das Backend und PyQt5 für die GUI-Elemente
 [GitHub Repo](https://github.com/Robin-Haupt-1/Auto-Sync-Anki-Addon)
 
 
-## Informationen über Lebensmittelkäufe über die Kommandozeile eingeben und in einer relationalen Datenbank speichern
+## Command line application for storing information on the food I purchase in a relational database
 
 The problem: I want to store information on the food items I purchase to better be able to judge the quality of my diet and track changes over time.
 Manually entering this data into an Excel file is time consuming and it would be challenging to always enter it in a way thats optimized for statistical analysis.
 
-The solution:([Click here for the german version 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md))
-
+The solution:
 
 I have created a command line tool that allows me to quickly enter data on a new purchase by offering past stores and products to select from. This also prevents duplicate entries for the same item from coming into existence.
 
