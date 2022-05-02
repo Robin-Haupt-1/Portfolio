@@ -69,7 +69,7 @@ Ein Logfenster ermöglicht es, die Aktivität der Erweiterung zu überwachen:
 
 ![auto sync log window](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20log%20window.png)
 
-Ich habe die Erweiterung veröffentlicht. Sie wurde bis jetzt 650 mal heruntergeladen und hat überwiegend positive Bewertungen erhalten. [^autosyncdownloadpage]
+Ich habe die Erweiterung als Open Source veröffentlicht. Sie wurde bis jetzt 650 mal heruntergeladen und hat überwiegend positive Bewertungen erhalten. [^autosyncdownloadpage]
 
 ### Verwendete Technologien
 
