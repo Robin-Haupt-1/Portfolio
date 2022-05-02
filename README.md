@@ -1,4 +1,5 @@
 # Portfolio
+([This is the english version. Click here for the german one 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md))
 
 ## Visualizing hierarchical relationships between notes in the knowledge management tool Obsidian.md
 
@@ -83,7 +84,8 @@ Python für das Backend und PyQt5 für die GUI-Elemente
 The problem: I want to store information on the food items I purchase to better be able to judge the quality of my diet and track changes over time.
 Manually entering this data into an Excel file is time consuming and it would be challenging to always enter it in a way thats optimized for statistical analysis.
 
-The solution:
+The solution:([Click here for the german version 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md))
+
 
 I have created a command line tool that allows me to quickly enter data on a new purchase by offering past stores and products to select from. This also prevents duplicate entries for the same item from coming into existence.
 
