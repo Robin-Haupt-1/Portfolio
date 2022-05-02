@@ -1,5 +1,5 @@
 # Portfolio
-([This is the english version of my portfolio. Click here to read the german one 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md))
+([This is the english version of my portfolio. Click here to read the german one 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md#portfolio))
 
 ## Visualizing hierarchical relationships between notes in the knowledge management tool Obsidian.md
 
