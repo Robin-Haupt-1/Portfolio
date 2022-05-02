@@ -86,11 +86,11 @@ Die Informationen von Hand in eine Exceltabelle o.ä. zu übertragen würde viel
 
 Die Lösung:
 
-Meine Kommandozeilenapplikation ließt die Informationen über vergangene Einkäufe aus einer Datenbank schläft und sie bei der Eingabe der neuen Einkäufe vor. Dadurch wird der Zeitaufwand für das Übertragen der Kassenbons stark gesengt, und es enstehen keine doppelten Einträge für den gleichen Artikel, die später bei der statistischen Auswertung wieder vereint werden müssten.
+Meine Kommandozeilenapplikation ließt die Informationen über vergangene Einkäufe aus einer Datenbank und schlägt sie bei der Eingabe der neuen Einkäufe vor. Dadurch wird der Zeitaufwand für das Übertragen der Kassenbons stark gesengt, und es enstehen keine doppelten Einträge für den gleichen Artikel, die später bei der statistischen Auswertung wieder vereint werden müssten.
 Auch wird zwischen abstrakteren Produktarten und konkreten Artikeln unterschieden, wobei jeder konkrete Artikel einem abstrakten Produkttyp zugeordnet sein muss. So kann ein Warentyp im Gesamten analysiert werden, unabhängig davon, in welchem Geschäft er unter welcher Marke in welcher Packungsgröße erworben wurde.
 
 Die in der Kommandozeile eingegebenen Informationen werden über REST-API-Endpunkte an einen Server übertragen, der sie in eine Datenbank schreibt. Diese Segregation der Aufgabenbereiche folgt einem Microserviceansatz.
-In meiner Implementation ist die MySQL-Datenbank beliebig mit einer anderen Art von Datenbank außtauschbar, da der Server unter Beachtung des Dependency-Inversion-Prinzips mit einem unspezifischen Interface arbeitet, das durch die MySQL-Schnittstelle oder eine andere Datenbankschnittstelle erfüllt werden kann.
+In meiner Implementierung ist die MySQL-Datenbank beliebig mit einer anderen Art von Datenbank außtauschbar, da der Server unter Beachtung des Dependency-Inversion-Prinzips mit einem unspezifischen Interface arbeitet, das durch die MySQL-Schnittstelle oder eine andere Datenbankschnittstelle erfüllt werden kann.
 
 ### Screenshot vom Gebrauch der Applikation zum Speichern eines gekauften Artikels
 
