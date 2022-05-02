@@ -1,5 +1,7 @@
 # Portfolio
 
+([Click here for the german version 🇩🇪 ](https://github.com/Robin-Haupt-1/Portfolio/blob/main/Portfolio%20-%20Deutsch.md))
+
 ## Extension for notekeeping app Obsidian.md
 
 The extension helps users with ordering and linking their notes, keeping an overview of their entire collection and finding notes relevant to the one they're currently working on. It has been downloaded 10.000 times[^mocdownloads] and has almost 100 stars on GitHub.
