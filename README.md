@@ -72,7 +72,7 @@ A log window allows monitoring and troubleshooting the tools activity:
 
 ![auto sync log window](https://raw.githubusercontent.com/Robin-Haupt-1/Auto-Sync-Anki-Addon/main/doc/2022-04-25%20log%20window.png)
 
-I have made this extension publicly available as free and open source software. It has been downloaded 650 times and has received overwhelmingly positive reviews. [^autosyncdownloadpage]
+I have made this extension publicly available as free and open source software. It has been downloaded 650 times and has received predominantly positive reviews. [^autosyncdownloadpage]
 
 ### Technologies used
 
